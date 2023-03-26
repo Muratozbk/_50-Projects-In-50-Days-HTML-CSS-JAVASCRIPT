@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+
 * {
   box-sizing: border-box;
 }
@@ -32,7 +33,7 @@ body {
 }
 
 .circle {
-  background-color: #ff7979;
+  background-color: darkolivegreen;
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -97,7 +98,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  color: #ff7979;
+  color: rgb(26, 197, 26);
 }
 
 nav ul li+li {
