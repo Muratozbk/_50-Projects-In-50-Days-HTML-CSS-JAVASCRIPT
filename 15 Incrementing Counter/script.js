@@ -20,3 +20,5 @@ counters.forEach(counter => {
     }
     updateCounter()
 })
+
+

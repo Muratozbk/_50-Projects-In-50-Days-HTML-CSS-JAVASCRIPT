@@ -30,6 +30,10 @@ body {
   margin-top: 10px;
 }
 
+.counter-container span {
+  white-space: nowrap;
+}
+
 @media(max-width:650px) {
   body {
     flex-direction: column;
