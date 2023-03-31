@@ -3,7 +3,7 @@ const minuteEl = document.querySelector('.minute')
 const secondEl = document.querySelector('.second')
 const timeEl = document.querySelector('.time')
 const dateEl = document.querySelector('.date')
-const toggle = document.querySelector('.toggle')
+const toggle = document.querySelector('.toggle');
 
 const days = ["Monday", "Tuesday", "Wednesday",
     "Thursday", "Friday", "Saturday", "Sunday"];
@@ -20,22 +20,28 @@ toggle.addEventListener('click', (e) => {
     }
 })
 
-
 function setTime() {
     const time = new Date();
     const month = time.getMonth();
     const day = time.getDay();
+    const date = time.getDate();
     const hours = time.getHours();
     const hoursForClock = hours % 12;
     const minute = time.getMinutes();
     const seconds = time.getSeconds();
-    console.log(seconds, hoursForClock)
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    // console.log(seconds, hoursForClock)
 
     hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 11, 0, 360)}deg)`;
 
     minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minute, 0, 59, 0, 360)}deg)`;
 
     secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`;
+
+    timeEl.innerHTML = `${hoursForClock}:${minute < 10 ? `0${minute}` : minute} ${ampm}`
+
+    dateEl.innerHTML = `${days[day - 1]}, ${months[month]
+        } <span class="circle">${date}</span> `
 }
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
@@ -46,4 +52,3 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 
 setInterval(setTime, 1000)
 
-// 11:^30
