@@ -55,6 +55,9 @@ body {
 }
 
 .clock {
+  background-color: rgb(24, 202, 78);
+  border: 5px dotted rgb(17, 126, 70);
+  border-radius: 50%;
   position: relative;
   width: 200px;
   height: 200px;
@@ -124,12 +127,14 @@ body {
 .date .circle {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  border-radius: 50%;
+  border-radius: 45%;
   height: 22px;
   width: 22px;
   display: inline-flex;
   align-items: center;
+  /* text-align: center; */
   justify-content: center;
+  text-align: center;
   font-size: 12px;
   /* line-height: 20px; */
   transition: 0.5s ease-in;
