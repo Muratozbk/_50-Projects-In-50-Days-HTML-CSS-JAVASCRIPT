@@ -19,12 +19,13 @@ body {
 button {
   position: relative;
   background-color: purple;
-  color: #fff;
+  color: #57ba45;
   border: 1px solid purple;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 80px 120px;
+  padding: 90px 120px;
   overflow: hidden;
   margin: 10px 0;
   cursor: pointer;
