@@ -1,4 +1,5 @@
 // fill hold hovered empty
+
 const fill = document.querySelector('.fill')
 const empties = document.querySelectorAll('.empty')
 
@@ -15,7 +16,7 @@ for (const empty of empties) {
 function dragStart() {
     // this.classList.add('hold')
     this.className += ' hold'
-    setTimeout(() => this.className = 'invisible', 0)
+    setTimeout(() => this.className = 'invisible', 1)
     console.log('drag start')
 }
 function dragEnd() {
@@ -24,7 +25,7 @@ function dragEnd() {
 }
 function dragOver(e) {
     e.preventDefault()
-    console.log('dragOver')
+    // console.log('dragOver')
 }
 function dragEnter(e) {
     e.preventDefault()
@@ -40,3 +41,5 @@ function dragDrop() {
     this.append(fill)
     console.log('drag Drop')
 }
+
+

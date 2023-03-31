@@ -18,14 +18,20 @@ body {
   height: 150px;
   width: 150px;
   margin: 10px;
+  border-radius: 10px;
   border: solid 3px black;
   background-color: #ccc;
+  outline: none;
+  overflow: hidden;
 }
 
 .fill {
+  overflow: hidden;
   background-size: cover;
-  height: 145px;
-  width: 145px;
+  outline: none;
+  border-radius: 10px;
+  height: 146px;
+  width: 146px;
   cursor: pointer;
   background-image: url('https://source.unsplash.com/random/150x150');
 }
