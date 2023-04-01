@@ -1,5 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+console.log(ctx)
 const colorPicker = document.getElementById('color');
 const increase = document.getElementById('increase')
 const decrease = document.getElementById('decrease')
@@ -7,7 +8,6 @@ const sizeBox = document.getElementById('size')
 const clear = document.getElementById('clear')
 
 let size = 10;
-
 let isPressed = false;
 let color = 'black'
 let x;
@@ -57,7 +57,7 @@ canvas.addEventListener('mousemove', (e) => {
 
         drawCircle(x2, y2)
         drawLine(x, y, x2, y2)
-        x = x2;
+        x = x2; //yeni başlangıç for line
         y = y2;
     }
 })
