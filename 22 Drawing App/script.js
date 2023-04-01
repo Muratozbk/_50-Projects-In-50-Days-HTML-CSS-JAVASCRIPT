@@ -26,10 +26,12 @@ decrease.addEventListener('click', () => {
     }
 })
 
+//Clear Canvas Context
 clear.addEventListener('click', () => {
     ctx.clearRect(0, 0, 800, 800)
 })
 
+// Color Picker.value
 colorPicker.addEventListener('change', () => {
     color = colorPicker.value
 })
@@ -62,13 +64,14 @@ canvas.addEventListener('mousemove', (e) => {
     }
 })
 
+//Draw Circle
 function drawCircle(x, y) {
     ctx.beginPath();
     ctx.arc(x, y, size, 0, Math.PI * 2);
     ctx.fillStyle = color  //'black'
     ctx.fill()
 }
-
+// Draw Line
 function drawLine(x1, y1, x2, y2) {
     ctx.beginPath()
     ctx.moveTo(x1, y1)
