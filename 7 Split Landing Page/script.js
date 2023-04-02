@@ -16,4 +16,4 @@ rightSide.addEventListener('mouseenter', () =>
 rightSide.addEventListener('mouseleave', () =>
     container.classList.remove('hover-right'));
 
-    // mouseenter mouseleave
+// mouseenter mouseleave

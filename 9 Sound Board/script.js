@@ -1,4 +1,4 @@
-const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong']
+const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong', 'test']
 
 sounds.forEach(sound => {
     const btn = document.createElement('button');
@@ -23,3 +23,4 @@ function stopSongs() {
         song.currentTime = 0;
     })
 }
+
