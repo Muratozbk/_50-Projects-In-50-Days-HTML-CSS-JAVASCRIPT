@@ -15,13 +15,13 @@ body {
 }
 
 .container {
-    display: flex;
     width: 90vw;
+    display: flex;
 }
 
 .panel {
+    /*cover */
     background-size: auto 100%;
-    /* cover */
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;

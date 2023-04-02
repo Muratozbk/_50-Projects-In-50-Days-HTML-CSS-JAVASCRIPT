@@ -8,11 +8,14 @@ const date = document.getElementById('date')
 const animated_bgs = document.querySelectorAll('.animated-bg')
 const animated_bg_texts = document.querySelectorAll('.animated-bg-text')
 
-setTimeout(getData, 2000)
-
-function getData() {
+setTimeout(getData, 2500)
+setTimeout(data1, 1000)
+function data1() {
   header.innerHTML =
     '<img src="https://source.unsplash.com/random/450x450" alt="" />'
+}
+function getData() {
+
   title.innerHTML = 'Lorem ipsum dolor sit amet'
   excerpt.innerHTML =
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis'

@@ -45,4 +45,3 @@ function update() {
         nextBtn.disabled = false
     }
 }
-
