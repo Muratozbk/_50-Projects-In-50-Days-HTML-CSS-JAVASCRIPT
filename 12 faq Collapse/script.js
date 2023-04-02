@@ -21,3 +21,4 @@ toggleBtns.forEach(toggle => {
 // toggleBtns.forEach(btn =>
 //     btn.addEventListener('click', () =>
 //         btn.closest('div').classList.toggle('active')))
+

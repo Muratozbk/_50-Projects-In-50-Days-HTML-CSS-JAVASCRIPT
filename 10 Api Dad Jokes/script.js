@@ -2,6 +2,7 @@ const jokeEl = document.getElementById('joke')
 const jokeBtn = document.getElementById('jokeBtn')
 
 jokeBtn.addEventListener('click', generateJoke)
+generateJoke()
 
 // const userAction = async () => {
 //     const response = await fetch('http://example.com/movies.json');
@@ -10,7 +11,6 @@ jokeBtn.addEventListener('click', generateJoke)
 // }
 // userAction()
 
-generateJoke()
 
 //// Async Await
 async function generateJoke() {
@@ -25,7 +25,8 @@ async function generateJoke() {
     jokeEl.innerHTML = data.joke
 }
 
-//// Using .then()
+
+//// Using .then() ///////////
 // function generateJoke() {
 //     const config = {
 //         headers: {
@@ -37,3 +38,4 @@ async function generateJoke() {
 //         // .then(data => console.log(data))
 //         .then(data => jokeEl.innerHTML = data.joke)
 // }
+/////////////////////
