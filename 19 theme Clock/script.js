@@ -51,3 +51,31 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 //   loadText.style.opacity = scale(load, 0, 100, 1, 0)
 
 setInterval(setTime, 1000)
+
+
+// const html = document.querySelector('html')
+// toggle.addEventListener('click', () => {
+//     html.classList.toggle('dark')
+//     if (html.classList.contains('dark')) toggle.innerText = 'Light mode'
+//     else toggle.innerText = 'Dark mode'
+// })
+
+// function setTime() {
+//     const time = new Date();
+//     const hour = time.getHours() % 12;
+//     const year = time.getFullYear();
+//     const day = time.getDay();
+//     const date = time.getDate()
+//     const month = time.getMonth()
+//     const minute = time.getMinutes()
+//     const second = time.getSeconds()
+//     console.log(day)
+
+//     hourEl.style.transform = `translate(-50%, -100%) rotate(${360 * hour / 12}deg)`
+//     minuteEl.style.transform = `translate(-50%, -100%) rotate(${360 * minute / 60}deg)`
+//     secondEl.style.transform = `translate(-50%, -100%) rotate(${360 * second / 60}deg)`
+
+//     timeEl.innerHTML = `${hour}:${minute < 10 ? '0' + minute : minute}`
+//     dateEl.innerHTML = `${days[day - 1]} , ${months[month]} <span class="circle">${date}</span>`
+// }
+// setInterval(setTime, 1000)

@@ -29,3 +29,4 @@ function setActiveSlide() {
 
     slides[activeSlide].classList.add('active')
 }
+
