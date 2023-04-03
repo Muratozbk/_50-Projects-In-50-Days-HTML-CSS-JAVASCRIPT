@@ -51,44 +51,38 @@ function updateBigCup() {
     }
 }
 
-// updateBigCup()
-// smallCups.forEach((cup, idx) => {
-//     cup.addEventListener('click', () => {
-//         highlightCups(idx)
-//     })
-// })
 
-// function highlightCups(idx) {
-//     if (smallCups[idx].classList.contains('full') &&
-//         !smallCups[idx].nextElementSibling?.classList.contains('full')) {
-//         idx--
-//     }
+
+// smallCups.forEach((cup, idx) => cup.addEventListener('click', () =>
+//     highlightCup(idx)))
+
+// function highlightCup(idx) {
+//     if (smallCups[idx].classList.contains('full') && !smallCups[idx].nextElementSibling?.classList.contains('full')) idx--;
 //     smallCups.forEach((cup, idx2) => {
 //         if (idx2 <= idx) {
 //             cup.classList.add('full')
-//         } else { cup.classList.remove('full') }
+//         } else cup.classList.remove('full')
 //     })
-//     updateBigCup()
+//     updateBig()
 // }
 
-// function updateBigCup() {
-//     const fullCups = document.querySelectorAll('.full').length;
-//     const totalCups = smallCups.length;
-//     console.log(fullCups, totalCups)
+// function updateBig() {
+//     const fullCups = document.querySelectorAll('.full').length
+//     const totalCups = smallCups.length
+//     console.log(fullCups)
+
 //     if (fullCups === 0) {
-//         percentage.style.visibility = 'hidden';
-//         percentage.style.height = 0;
-//         percentage.innerHTML = 0;
+//         percentage.style.visibility = 'hidden'
 //     } else {
 //         percentage.style.visibility = 'visible'
-//         percentage.style.height = `${330 * fullCups / totalCups}px`
-//         percentage.innerHTML = `${(100 * fullCups / totalCups)}%`
+//         percentage.style.height = `${330 * fullCups / totalCups}px`;
+//         percentage.innerText = `${100 * fullCups / totalCups}%`
 //     }
 //     if (fullCups === totalCups) {
+//         remained.style.visibility = 'hidden';
 //         remained.style.height = 0;
-//         remained.style.visibility = 'hidden'
 //     } else {
-//         remained.style.visibility = 'visible'
-//         liters.innerText = `${2 - (.25 * fullCups)}L`
+//         remained.style.visibility = 'visible';
+//         liters.innerText = `${(fullCups / totalCups) * 2}L`
 //     }
 // }
