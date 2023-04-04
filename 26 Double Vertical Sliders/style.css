@@ -24,7 +24,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-300%);
+  transition: transform 0.5s ease-in-out;
+  /* transform: translateY(-300%) */
 }
 
 .left-slide>div {
@@ -49,7 +50,8 @@ body {
   left: 35%;
   height: 100%;
   width: 65%;
-  transform: translateY(0%);
+  transition: transform 0.5s ease-in-out;
+  /* transform: translateY(0%); */
 }
 
 .right-slide>div {
