@@ -15,13 +15,13 @@ let y;
 // ctx.fillStyle = "green";
 // ctx.fillRect(10, 10, 150, 100); y , x , width, length;
 increase.addEventListener('click', () => {
-    if (size < 50)
-        size += 5;
+    if (size < 30)
+        size += 2;
     sizeBox.innerText = size
 })
 decrease.addEventListener('click', () => {
-    if (size > 5) {
-        size -= 5;
+    if (size > 2) {
+        size -= 2;
         sizeBox.innerHTML = size
     }
 })
@@ -34,6 +34,7 @@ clear.addEventListener('click', () => {
 // Color Picker.value
 colorPicker.addEventListener('change', () => {
     color = colorPicker.value
+    console.log(color)
 })
 
 canvas.addEventListener('mousedown', (e) => {
@@ -41,7 +42,7 @@ canvas.addEventListener('mousedown', (e) => {
 
     x = e.offsetX;
     y = e.offsetY;
-    // console.log(isPressed, x, y)
+    console.log(isPressed, x, y)
 })
 
 canvas.addEventListener('mouseup', (e) => {

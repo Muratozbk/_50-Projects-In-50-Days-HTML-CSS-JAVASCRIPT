@@ -18,6 +18,8 @@ body {
 
 canvas {
   border: 2px solid darkkhaki;
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
 }
 
 .toolbox {
@@ -26,6 +28,7 @@ canvas {
   display: flex;
   width: 804px;
   padding: 1rem;
+  border-radius: 1px 1px 5px 5px;
 }
 
 .toolbox>* {
@@ -37,6 +40,7 @@ canvas {
   font-size: 2rem;
   height: 50px;
   width: 50px;
+  border-radius: 3px;
   margin: .25rem;
   padding: .25rem;
   cursor: pointer;
