@@ -21,7 +21,7 @@ loveMe.addEventListener('click', (e) => {
 
 const createHeart = (e) => {
     const heart = document.createElement('i')
-    heart.classList.add('fas')
+    heart.classList.add(`fas`)
     heart.classList.add('fa-heart');
 
     const x = e.clientX
@@ -43,3 +43,4 @@ const createHeart = (e) => {
 
     setTimeout(() => heart.remove(), 1000) // removes the hearts
 }
+
