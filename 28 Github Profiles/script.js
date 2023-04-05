@@ -4,13 +4,14 @@ const main = document.getElementById('main')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
 
-//// getUser('bradtraversy')
+
+// getUser('bradtraversy')
 
 async function getUser(username) {
     try {
         const { data } = await axios(API_URL + username)
 
-        // console.log(data)
+        console.log(data)
         createUserCard(data)
         getRepos(username)
     } catch (err) {
@@ -86,4 +87,7 @@ form.addEventListener('submit', (e) => {
         search.value = '';
     }
 })
+
+
+
 
