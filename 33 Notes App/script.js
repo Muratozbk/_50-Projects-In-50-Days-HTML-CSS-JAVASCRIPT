@@ -1,5 +1,11 @@
 const addBtn = document.getElementById('add')
 
+const notes = JSON.parse(localStorage.getItem('notes'))
+
+if (notes) {
+    notes.forEach(note => addNewNote(note))
+}
+
 addBtn.addEventListener('click', () => addNewNote())
 
 function addNewNote(text = '') {
@@ -25,6 +31,7 @@ function addNewNote(text = '') {
 
     deleteBtn.addEventListener('click', () => {
         note.remove()
+        updateLS()
     })
 
     editBtn.addEventListener('click', () => {
@@ -36,7 +43,25 @@ function addNewNote(text = '') {
         const { value } = e.target
 
         main.innerHTML = marked(value)
+
+        updateLS()
     })
 
     document.body.appendChild(note)
 }
+
+function updateLS() {
+    const noteText = document.querySelectorAll('textarea')
+    const notes = []
+
+    noteText.forEach(note => notes.push(note.value));
+
+    localStorage.setItem('notes', JSON.stringify(notes))
+}
+
+//let make clear all btn
+
+// LocalStorage
+// localStorage.setItem('name', JSON.stringify(123))
+// JSON.parse(localStorage.getItem('name'))
+// // localStorage.removeItem('name')
