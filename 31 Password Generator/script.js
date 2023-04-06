@@ -14,18 +14,41 @@ const randomFunc = {
     symbol: getRandomSymbol
 }
 
-clipboardEl.addEventListener('click', () => {
-    const textarea = document.createElement('textarea')
-    const password = resultEl.innerText
-    if (!password) return;
+// clipboardEl.addEventListener('click', () => {
+//     const textarea = document.createElement('textarea')
+//     const password = resultEl.innerText
+//     if (!password) return;
 
-    textarea.value = password;
-    document.body.appendChild(textarea)
-    textarea.select() //select everything in select area
-    document.execCommand('copy')
-    textarea.remove()
-    alert('Password copied to clipboard')
+//     textarea.value = password;
+//     document.body.appendChild(textarea)
+//     textarea.select() //select everything in select area
+//     document.execCommand('copy')
+//     textarea.remove()
+//     alert('Password copied to clipboard')
+// })
+
+clipboardEl.addEventListener('click', async () => {
+    try {
+        if (!resultEl.innerText) return;
+        await navigator.clipboard.writeText(resultEl.innerText);
+        alert('Password copied to clipboard');
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
 })
+
+//// // Modern way Clipboard Api
+// const textarea = document.getElementById('myTextarea');
+// const button = document.getElementById('myButton');
+
+//// button.addEventListener('click', async () => {
+//   try {
+//     await navigator.clipboard.writeText(textarea.value);
+//     console.log('Text copied to clipboard');
+//   } catch (err) {
+//     console.error('Failed to copy text: ', err);
+////   }
+// });/////////////////
 
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
@@ -46,7 +69,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     const typesCount = lower + upper + number + symbol; // 4
 
     const typesArr = [{ lower }, { upper }, { number }, { symbol }]
-        .filter(item => Object.values(item)[0])
+        .filter(item => Object.values(item)[0]) //Filter trues
     // console.log(typesArr)
     if (typesCount === 0) return 'Select a type please';
 
@@ -78,5 +101,3 @@ function getRandomSymbol() {
     const symbols = '!@#$%#^&*(){[]}=<>/,.'
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
-
-
