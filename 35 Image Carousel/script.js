@@ -15,6 +15,7 @@ function run() {
 function changeImage() {
     if (idx > images.length - 1) {
         idx = 0
+
     } else if (idx < 0) {
         idx = images.length - 1
     }
@@ -38,24 +39,3 @@ prevBtn.addEventListener('click', () => {
     changeImage(idx)
 })
 
-// const totalCount = images.length - 1
-
-
-// prevBtn.addEventListener('click', () => {
-//     idx--
-//     if (idx < 0) { idx = totalCount }
-//     console.log(idx)
-//     updateImg(idx)
-// })
-
-// function updateImg(idx) {
-//     imgContainer.style.transform = `translateX(-${500 * idx}px)`
-// }
-
-
-// setInterval(() => {
-//     idx++
-//     if (idx > totalCount) return idx = -1;
-//     updateImg(idx);
-//     console.log(idx)
-// }, 2000)
