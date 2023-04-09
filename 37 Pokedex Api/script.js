@@ -25,7 +25,7 @@ const main_types = Object.keys(colors)
 console.log(main_types) // ['fire','grass'...]
 
 const fetchPokemons = async () => {
-    for (let i = 1; i < pokemon_count; i++) {
+    for (let i = 1; i <= pokemon_count; i++) {
         await getPokemon(i)
     }
 }
@@ -68,3 +68,5 @@ const createPokemonCard = (pokemon) => {
     pokeEl.innerHTML = pokeHtml;
     poke_container.appendChild(pokeEl)
 }
+
+
