@@ -46,7 +46,7 @@ body {
   height: 500px;
   width: 500px;
   position: relative;
-  transition: .4s ease;
+  transition: .55s ease;
 }
 
 .boxes.big {
@@ -65,7 +65,7 @@ body {
   background-repeat: no-repeat;
   background-size: 500px 500px;
   background-image: url('https://media.giphy.com/media/AIf6QhkQvdIPEJBeSR/giphy.gif');
-  transition: .4s ease;
+  transition: .55s ease;
 }
 
 .box::after {
