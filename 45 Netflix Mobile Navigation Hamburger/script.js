@@ -16,4 +16,4 @@ btnClose.addEventListener('click', () => {
 })
 
 
-navs.forEach(nav => nav.classList.remove('visible'))
+// navs.forEach(nav => nav.classList.remove('visible'))
