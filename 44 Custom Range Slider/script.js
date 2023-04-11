@@ -14,11 +14,19 @@ range.addEventListener('input', (e) => {
     const max = +e.target.max //100
     const min = +e.target.min //0
 
-
-
+    // const left = value * ((num_width - 20) / max) -
+    //     (num_label_width - 20) / 2;
+    const left = value * (num_width / max) - num_label_width / 2; // for clear 10px offset
+    console.log(left)
     label.innerHTML = value
+    label.style.left = `${left}px`
     // console.log(value)
 })
 
-// 6:55
+const scale = (num, in_min, in_max, out_min, out_max) => {
+    return ((num - in_min) * (out_max - out_min)) /
+        (in_max - in_min) + out_min
+}
+//   loadText.style.opacity = scale(load, 0, 100, 1, 0)
+
 
