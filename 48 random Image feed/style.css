@@ -38,3 +38,31 @@ body {
   width: 300px;
   max-width: 100%;
 }
+
+.rowNum {
+  position: fixed;
+  top: 20px;
+  right: 7%;
+  margin: 0 auto 20px;
+  padding: 5px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  width: 65px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+label {
+  position: fixed;
+  top: 57px;
+  right: 8%;
+  opacity: 0.5;
+}
+
+.rowNum::-webkit-outer-spin-button,
+.rowNum::-webkit-inner-spin-button {
+  visibility: visible;
+}
