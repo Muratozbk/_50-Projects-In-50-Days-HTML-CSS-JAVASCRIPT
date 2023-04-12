@@ -48,6 +48,32 @@ ul li label {
   cursor: pointer;
 }
 
+.answer {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  visibility: hidden;
+  position: relative;
+}
+
+.answer::before {
+  visibility: visible;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #732d91;
+  margin-right: 10px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+.answer:checked::before {
+  background-color: #8e44ad;
+}
+
 button {
   background-color: #8e44ad;
   border: none;
@@ -65,6 +91,6 @@ button:hover {
   background-color: #732d91;
 }
 
-button:focus {
+button:active {
   background-color: #5e3370;
 }
