@@ -1,0 +1,57 @@
+{
+    "editor.fontSize": 16,
+    "update.enableWindowsBackgroundUpdates": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.minimap.autohide": true,
+    "editor.minimap.maxColumn": 20,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.glyphMargin": false,
+    "editor.showFoldingControls": "never",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.unicodeHighlight.allowedLocales": {
+        "tr": true
+    },
+    "testing.gutterEnabled": false,
+    "scm.diffDecorationsGutterWidth": 1,
+    "scm.diffDecorationsGutterVisibility": "hover",
+    "scm.diffDecorationsGutterAction": "none",
+    "workbench.preferredHighContrastColorTheme": "Default Dark+",
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.excludeList": [
+        "/**/node_modules/**",
+        "/.vscode/**"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css/",
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css/",
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [],
+    "editor.accessibilitySupport": "off",
+    "editor.formatOnSave": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        {
+            "text": "BUG",
+            "color": "#333",
+            "backgroundColor": "#e74c3c",
+            "font-size": "18px"
+        },
+        {
+            "text": "IMPORTANT",
+            "color": "#333",
+            "backgroundColor": "#2ecc71",
+            "font-size": "18px"
+        },
+    ],
+    "tabnine.experimentalAutoImports": true
+}

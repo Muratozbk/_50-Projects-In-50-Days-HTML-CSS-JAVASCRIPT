@@ -5,6 +5,7 @@ const game_container = document.getElementById('game-container')
 const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
+const reloadBtn = document.querySelector('.reload')
 
 // let seconds = 0;
 // let score = 0;
@@ -86,9 +87,13 @@ const message = document.getElementById('message')
 //     scoreEl.innerText = `Score: ${score}`
 // }
 
-let seconds = 0;
+
+
+let seconds = 1;   //gecikme engellendi
 let score = 0;
 let selected_insect = {}
+let randomInsectsSrc = []
+let randomInsectsAlt = []
 
 startBtn.addEventListener('click', () => screens[0].classList.add('up'))
 chooseInsectBtns.forEach(btn => {
@@ -117,18 +122,72 @@ function createTime() {
     timeEl.innerText = `Time: ${time}`
 }
 
-function createInsect() {
-    const insectEl = document.createElement('div')
-    insectEl.classList.add('insect')
-
+function getRandomLocation() {
+    const width = window.innerWidth
+    const height = window.innerHeight
+    const x = Math.floor(Math.random() * (width - 100) + 1)
+    const y = Math.floor(Math.random() * (height - 200) + 100)
+    return { x, y }
 }
 
+function createInsect(src = selected_insect.src, alt = selected_insect.alt) {
+    const insectEl = document.createElement('div')
+
+    insectEl.classList.add('insect')
+    insectEl.innerHTML = ` <img src="${src}" alt="${alt}" style="transform: rotate(${Math.random() * 360}deg)">`
+    const { x, y } = getRandomLocation();
+    insectEl.style.top = `${y}px`
+    insectEl.style.left = `${x}px`
+
+    insectEl.addEventListener('click', catchInsect)
+    game_container.appendChild(insectEl)
+}
+
+function catchInsect(e) {
+    e.preventDefault()
+    increaseScore()
+
+    // Remove the transform property from the img element
+    this.querySelector('img').style.transform = 'none'
+
+    this.style.transition = 'transform 0.3s linear';
+    setTimeout(() => this.classList.add('caught'), 10)
+
+    setTimeout(() => this.remove(), 2000)
+
+    if (score < 3) {
+        setTimeout(createInsect, 1000)
+        setTimeout(createInsect, 1600)
+    }
+    else {
+        setTimeout(() => createInsect(randomInsectsSrc), 700)
+        setTimeout(() => createInsect(randomInsectsSrc), 1200)
+    }
+}
+
+function increaseScore() {
+    score++
+    // if (score > 3) 
+    createRandomInsect()
+
+    if (score > 19) {
+        message.classList.add('visible')
+    }
+    scoreEl.innerText = `Score: ${score}`
+}
+
+reloadBtn.addEventListener('click', () => {
+    screens[0].classList.remove('up')
+    screens[1].classList.remove('up')
+})
 
 
+function createRandomInsect() {
+    const randomSrc = document.querySelectorAll('img')
 
-
-
-
+    randomInsectsSrc = randomSrc[Math.floor(Math.random() * 4)].src;
+    randomInsectsAlt = randomSrc[Math.floor(Math.random() * 4)].alt;
+}
 
 // document.location.reload()
 
