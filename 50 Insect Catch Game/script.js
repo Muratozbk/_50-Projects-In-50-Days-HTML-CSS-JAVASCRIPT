@@ -98,9 +98,12 @@ let randomInsectsAlt = []
 startBtn.addEventListener('click', () => screens[0].classList.add('up'))
 chooseInsectBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+        //Select Insect
         const img = btn.querySelector('img')
         const src = img.src
         const alt = img.alt
+
+        console.log(img)
         selected_insect = { src, alt }
         console.log(selected_insect)
 
@@ -147,11 +150,10 @@ function catchInsect(e) {
     e.preventDefault()
     increaseScore()
 
-    // Remove the transform property from the img element
-    this.querySelector('img').style.transform = 'none'
-
-    this.style.transition = 'transform 0.3s linear';
-    setTimeout(() => this.classList.add('caught'), 10)
+    setTimeout(() => {
+        this.classList.add('caught')
+        // this.style.transition = 'transform 0.3s linear';
+    }, 10)
 
     setTimeout(() => this.remove(), 2000)
 
@@ -167,20 +169,14 @@ function catchInsect(e) {
 
 function increaseScore() {
     score++
-    // if (score > 3) 
-    createRandomInsect()
+    if (score > 2)
+        createRandomInsect()
 
-    if (score > 19) {
+    if (score > 29) {
         message.classList.add('visible')
     }
     scoreEl.innerText = `Score: ${score}`
 }
-
-reloadBtn.addEventListener('click', () => {
-    screens[0].classList.remove('up')
-    screens[1].classList.remove('up')
-})
-
 
 function createRandomInsect() {
     const randomSrc = document.querySelectorAll('img')
@@ -188,6 +184,15 @@ function createRandomInsect() {
     randomInsectsSrc = randomSrc[Math.floor(Math.random() * 4)].src;
     randomInsectsAlt = randomSrc[Math.floor(Math.random() * 4)].alt;
 }
+
+reloadBtn.addEventListener('click', () => {
+    // location.reload()
+    screens[0].classList.remove('up')
+    screens[1].classList.remove('up')
+})
+
+
+
 
 // document.location.reload()
 
