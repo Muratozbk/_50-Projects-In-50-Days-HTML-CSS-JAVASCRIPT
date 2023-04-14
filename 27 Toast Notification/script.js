@@ -37,28 +37,3 @@ function getRandomType() {
 
 
 
-// const messages = [
-//     'Message One',
-//     'Message Two',
-//     'Message Three',
-//     'Message Four'
-// ]
-// const types = ['info', 'success', 'error']
-
-// button.addEventListener('click', () => createNot('sdsd'));
-
-// function createNot(message = null, type = null) {
-//     const toast = document.createElement('div')
-//     toast.classList.add('toast')
-//     toast.classList.add(type ? type : types[getRandomNum(types.length)])
-//     toast.innerText = message ? message : messages[getRandomNum(messages.length)]
-//     toasts.appendChild(toast)
-
-//     setTimeout(() => {
-//         toast.remove()
-//     }, 3000)
-// }
-
-// function getRandomNum(num) {
-//     return Math.floor(Math.random() * num)
-// }

@@ -74,6 +74,7 @@ button {
 
 button:hover {
   color: #222;
+  font-size: 22px;
 }
 
 button:focus {
@@ -85,10 +86,6 @@ button:focus {
   left: 35%;
   top: 50%;
   z-index: 100;
-}
-
-.slider-container .action-buttons .down-button {
-  transform: translateX(-100%);
 }
 
 .slider-container .action-buttons .down-button {
