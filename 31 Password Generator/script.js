@@ -14,18 +14,6 @@ const randomFunc = {
     symbol: getRandomSymbol
 }
 
-// clipboardEl.addEventListener('click', () => {
-//     const textarea = document.createElement('textarea')
-//     const password = resultEl.innerText
-//     if (!password) return;
-
-//     textarea.value = password;
-//     document.body.appendChild(textarea)
-//     textarea.select() //select everything in select area
-//     document.execCommand('copy')
-//     textarea.remove()
-//     alert('Password copied to clipboard')
-// })
 
 clipboardEl.addEventListener('click', async () => {
     try {
@@ -58,19 +46,19 @@ generateEl.addEventListener('click', () => {
     const hasSymbol = symbolsEl.checked;
     // console.log(hasLower, hasUpper, hasNumber, hasSymbol)
 
-    //Generate password function
+    ////Generate password function
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length)
 })
 
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = ''
 
-    // Filter Settings Value
+    //// Filter Settings Value
     const typesCount = lower + upper + number + symbol; // 4
 
     const typesArr = [{ lower }, { upper }, { number }, { symbol }]
         .filter(item => Object.values(item)[0]) //Filter trues
-    // console.log(typesArr)
+    console.log(typesArr)
     if (typesCount === 0) return 'Select a type please';
 
     for (let i = 0; i < length; i += typesCount) {
@@ -101,3 +89,4 @@ function getRandomSymbol() {
     const symbols = '!@#$%#^&*(){[]}=<>/,.'
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
+

@@ -20,11 +20,11 @@ function doTheTrick(clickedOne) {
     }
 }
 
-toggles.forEach(toggle => toggle.addEventListener('change', (e) => {
-    if (good.checked && cheap.checked && fast.checked) {
-        if (e.target === good) cheap.checked = false;
-        if (e.target === cheap) fast.checked = false;
-        if (e.target === fast) good.checked = false;
-    }
-}))
+// toggles.forEach(toggle => toggle.addEventListener('change', (e) => {
+//     if (good.checked && cheap.checked && fast.checked) {
+//         if (e.target === good) cheap.checked = false;
+//         if (e.target === cheap) fast.checked = false;
+//         if (e.target === fast) good.checked = false;
+//     }
+// }))
 

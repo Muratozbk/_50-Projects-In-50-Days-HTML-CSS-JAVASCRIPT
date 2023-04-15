@@ -69,3 +69,17 @@ body {
 .hidden {
   display: none;
 }
+
+.deleteAllBtn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.3rem;
+  background-color: #d08150;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
