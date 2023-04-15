@@ -5,7 +5,7 @@ const form = document.getElementById('form')
 const search = document.getElementById('search')
 
 
-// getUser('bradtraversy')
+getUser('bradtraversy')
 
 async function getUser(username) {
     try {
@@ -87,7 +87,4 @@ form.addEventListener('submit', (e) => {
         search.value = '';
     }
 })
-
-
-
 
