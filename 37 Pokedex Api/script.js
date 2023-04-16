@@ -34,7 +34,7 @@ const getPokemon = async (id) => {
     const url = API_URL + id
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data)
+    // console.log(data)
     createPokemonCard(data)
 }
 
@@ -52,7 +52,6 @@ const createPokemonCard = (pokemon) => {
         poke_types.indexOf(type) > -1)
 
     const color = colors[type]
-
     pokeEl.style.backgroundColor = color;
     console.log(poke_types)
 
