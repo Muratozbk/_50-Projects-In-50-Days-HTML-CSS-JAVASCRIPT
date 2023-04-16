@@ -1,6 +1,6 @@
 const poke_container = document.getElementById('poke-container')
 
-const pokemon_count = 8; // create id data for every card
+const pokemon_count = 18; // create id data for every card
 
 const API_URL = 'https://pokeapi.co/api/v2/pokemon/' // + id (1)
 
