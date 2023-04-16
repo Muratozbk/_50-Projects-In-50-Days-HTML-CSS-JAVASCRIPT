@@ -39,3 +39,6 @@ prevBtn.addEventListener('click', () => {
     changeImage(idx)
 })
 
+
+
+
