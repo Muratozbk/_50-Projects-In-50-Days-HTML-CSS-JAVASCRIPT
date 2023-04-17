@@ -5,7 +5,7 @@
   }
 
   body {
-    background-color: #f8f9fd;
+    background-color: #e2efd0;
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
@@ -33,8 +33,8 @@
   }
 
   .header {
-    background-color: #3e57db;
-    color: #fff;
+    background-color: #6647e1;
+    color: #ecf2ea;
     padding: 30px 20px;
   }
 
@@ -50,7 +50,7 @@
   }
 
   .user-list {
-    background-color: #fff;
+    background-color: #e6eee7;
     list-style: none;
     margin: 0;
     padding: 0;
