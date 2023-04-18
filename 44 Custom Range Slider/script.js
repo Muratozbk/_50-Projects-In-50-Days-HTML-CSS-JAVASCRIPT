@@ -14,9 +14,9 @@ range.addEventListener('input', (e) => {
     const max = +e.target.max //100
     const min = +e.target.min //0
 
-    // const left = value * ((num_width - 20) / max) -
-    //     (num_label_width - 20) / 2;
-    const left = value * (num_width / max) - num_label_width / 2; // for clear 10px offset
+    const left = value * ((num_width - 20) / max) -
+        (num_label_width - 20) / 2;
+    // const left = value * (num_width / max) - num_label_width / 2; // for clear 10px offset
     console.log(left)
     label.innerHTML = value
     label.style.left = `${left}px`

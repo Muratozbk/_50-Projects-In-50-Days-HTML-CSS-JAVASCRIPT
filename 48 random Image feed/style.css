@@ -42,7 +42,7 @@ body {
 .rowNum {
   position: fixed;
   top: 20px;
-  right: 7%;
+  right: 7vw;
   margin: 0 auto 20px;
   padding: 5px 0;
   font-size: 1rem;
@@ -50,7 +50,7 @@ body {
   text-align: center;
   width: 65px;
   border: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
@@ -58,11 +58,12 @@ body {
 label {
   position: fixed;
   top: 57px;
-  right: 8%;
+  right: 8vw;
   opacity: 0.5;
 }
 
 .rowNum::-webkit-outer-spin-button,
 .rowNum::-webkit-inner-spin-button {
   visibility: visible;
+  height: 30px;
 }

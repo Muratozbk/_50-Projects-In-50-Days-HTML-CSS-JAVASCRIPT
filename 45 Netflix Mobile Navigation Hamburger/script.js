@@ -9,11 +9,7 @@ btnOpen.addEventListener('click', () => {
 })
 
 btnClose.addEventListener('click', () => {
-    navs.forEach((nav, idx) => {
-        setTimeout(() => nav.classList.remove('visible'), idx * 1)
-
-    })
+    navs.forEach(nav => nav.classList.remove('visible'))
 })
 
 
-// navs.forEach(nav => nav.classList.remove('visible'))
